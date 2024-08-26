@@ -41,7 +41,7 @@ export default function TemporaryDrawer() {
   }}
 
   const DrawerList = (
-    <Box sx={{ width: "250", background:"black", color:"white" }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: "250", background:"black", color:"white", height: "100%" }} role="presentation" onClick={toggleDrawer(false)}>
       <h1>My library</h1>
       <List>
         {[{name: 'Albums', icon: faCompactDisc }, 
@@ -58,16 +58,20 @@ export default function TemporaryDrawer() {
           </ListItem>
         ))}
       </List>
-      <Divider />
+      <Divider style={{background: "white"}} />
       <h1>I am feeling lucky</h1>
       <List>
-        {['Albums', 'Playlists', 'Artists', 'Podcasts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+      {[{name: 'Albums', icon: faCompactDisc, secondaryIcon: faDice }, 
+        {name: 'Playlists', icon: faHeadphones, secondaryIcon: faDice }, 
+        {name: 'Artists', icon: faPerson, secondaryIcon: faDice}, 
+        {name:'Podcasts', icon: faMicrophone, secondaryIcon: faDice}].map((album, index) => (
+          <ListItem key={album} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              {index % 2 === 0 ? <FontAwesomeIcon icon={faDice} size="lg" /> : <FontAwesomeIcon icon={faDice} size="lg" />}
+              <FontAwesomeIcon icon={album.secondaryIcon} size="lg" style={{color: "white", marginLeft:"-5" }}></FontAwesomeIcon>
               </ListItemIcon>
-              <ListItemText primary={text} />
+
+              <ListItemText primary={album.name} />
             </ListItemButton>
           </ListItem>
         ))}
