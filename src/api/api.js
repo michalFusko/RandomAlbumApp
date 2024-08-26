@@ -18,8 +18,17 @@ export const Api = createApi({
   endpoints: (builder) => ({
     getUserAlbums: builder.query({
       query: () => `albums`,
-      
     }),
+    getUserPlaylists: builder.query({
+      query: () => `playlists`,
+    }),
+    getUserArtists: builder.query({
+      query: () => `following?type=artist`,
+    }),
+    getUserPodcasts: builder.query({
+      query: () => `shows`,
+    }),
+    
     
     
   }),
