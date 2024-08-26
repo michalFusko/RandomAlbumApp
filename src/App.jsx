@@ -1,9 +1,14 @@
+import React from 'react'
+import Login from "./components/Login"
+import AlbumCard from './components/AlbumCard'
 
-function App() {
+const App = () => {
+
   return (
-    <div>
-      jožo kunda pičo
-    </div>
+    <>
+    <Login></Login>
+    <AlbumCard></AlbumCard>
+    </>
   )
 }
 
