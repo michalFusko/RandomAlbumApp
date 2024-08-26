@@ -1,8 +1,9 @@
 import React from 'react'
 import { useGetUserAlbumsQuery } from '../api/api'
 
-const AlbumCard = (accessToken) => {
+const AlbumCard = () => {
     const albums = useGetUserAlbumsQuery()
+    
   return (
     <div>
 
