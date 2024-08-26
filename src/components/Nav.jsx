@@ -23,26 +23,9 @@ export default function TemporaryDrawer() {
     setOpen(newOpen);
   };
 
-  const iconPicker = (i) => {
-    for (let index ; index < 3; index++) {
-    if (index == 0) {
-      return <FontAwesomeIcon icon={faCompactDisc} />
-    }
-    else if (index== 1) {
-      return <FontAwesomeIcon icon={faHeadphones} />
-    }
-    else if (index== 2) { 
-      return <FontAwesomeIcon icon={faPerson} />
-    }
-    else {
-      return <FontAwesomeIcon icon={faMicrophone} />
-
-    }
-  }}
-
   const DrawerList = (
-    <Box sx={{ width: "250", background:"black", color:"white", height: "100%" }} role="presentation" onClick={toggleDrawer(false)}>
-      <h1>My library</h1>
+    <Box sx={{ width: "300px", background:"black", color:"white", height: "100%", fontFamily:"arial" }} role="presentation" onClick={toggleDrawer(false)}>
+      <h1 style={{fontFamily:"helvetica", textAlign:"center"}}>My library</h1>
       <List>
         {[{name: 'Albums', icon: faCompactDisc }, 
         {name: 'Playlists', icon: faHeadphones }, 
@@ -53,13 +36,13 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <FontAwesomeIcon icon={album.icon} size="lg" style={{color: "white"}}></FontAwesomeIcon>
               </ListItemIcon>
-              <ListItemText primary={album.name} />
+              <ListItemText primary={album.name}/>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider style={{background: "white"}} />
-      <h1>I am feeling lucky</h1>
+      <h1 style={{fontFamily:"helvetica", textAlign:"center"}}>I am feeling lucky</h1>
       <List>
       {[{name: 'Albums', icon: faCompactDisc, secondaryIcon: faDice }, 
         {name: 'Playlists', icon: faHeadphones, secondaryIcon: faDice }, 
