@@ -2,9 +2,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 
 export const getToken = () => {
+    if (window?.location?.hash) {
     const stringSplit = window.location.hash.split("=")
     const accessToken = stringSplit[1].split("&")
-  return accessToken  
+  return accessToken  }
+  else {
+    return undefined
+  }
 }
 
 
