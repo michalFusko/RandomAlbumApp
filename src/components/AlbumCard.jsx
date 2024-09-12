@@ -8,14 +8,32 @@ import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faRotateRight } from '@fortawesome/free-solid-svg-icons';
 import { useGetUserAlbumsQuery } from '../api/api';
+import { useEffect, useState } from 'react';
 
 export default function AlbumCard() {
   const theme = useTheme();
-   const { data : Albums }  = useGetUserAlbumsQuery()
+  const [offset, setOffset] = useState(0);  // State to manage offset
+  const { data : Albums, error, isLoading } = useGetUserAlbumsQuery({ limit: 50, offset });  // Pass limit and offset correctly
+
   const randomToTwenty = Math.floor(Math.random()*Albums?.items.length)
   const randomAlbum = Albums?.items[randomToTwenty].album
   console.log(Albums)
   console.log(randomAlbum)
+
+  useEffect(() => {
+    if (Albums && Albums.total) {
+      const totalAlbums = Albums.total;
+      console.log("Total Albums:", totalAlbums);
+
+      // Update the offset based on total albums (if needed)
+      if (totalAlbums > 50) {
+        setOffset((prevOffset) => prevOffset + 50);  // Increment offset by 50
+      }
+    }
+  }, []);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading albums.</p>;
 
 
   return (

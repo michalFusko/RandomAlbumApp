@@ -12,12 +12,13 @@ export const getToken = () => {
 }
 
 
+
 export const Api = createApi({
   reducerPath: "Api",
   baseQuery: fetchBaseQuery({ baseUrl: "https://api.spotify.com/v1/me", headers: {Authorization: `Bearer ${getToken()}`}}),
   endpoints: (builder) => ({
     getUserAlbums: builder.query({
-      query: () => `albums?limit=50`,
+      query: ({ limit = 50, offset = 0 }) => `albums?limit=${limit}&offset=${offset}`,
     }),
     getUserPlaylists: builder.query({
       query: () => `playlists`,
@@ -28,10 +29,8 @@ export const Api = createApi({
     getUserPodcasts: builder.query({
       query: () => `shows`,
     }),
-    
-    
-    
   }),
 });
+
 
 export const { useGetUserAlbumsQuery } = Api;
