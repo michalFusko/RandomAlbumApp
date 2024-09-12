@@ -17,7 +17,7 @@ export const Api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://api.spotify.com/v1/me", headers: {Authorization: `Bearer ${getToken()}`}}),
   endpoints: (builder) => ({
     getUserAlbums: builder.query({
-      query: () => `albums`,
+      query: () => `albums?limit=50`,
     }),
     getUserPlaylists: builder.query({
       query: () => `playlists`,

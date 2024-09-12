@@ -15,6 +15,7 @@ export default function AlbumCard() {
    const { data : Albums }  = useGetUserAlbumsQuery()
   const randomToTwenty = Math.floor(Math.random()*Albums?.items.length)
   const randomAlbum = Albums?.items[randomToTwenty].album
+  console.log(Albums)
   console.log(randomAlbum)
 
 
