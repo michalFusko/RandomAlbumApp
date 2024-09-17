@@ -41,7 +41,7 @@ const App = () => {
     <>
     <Nav></Nav>
     {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
-    <SeeMore></SeeMore>
+    {randomAlbum && <SeeMore randomAlbum={randomAlbum}></SeeMore>}
     </>
   )
 }
