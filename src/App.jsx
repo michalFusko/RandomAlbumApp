@@ -1,13 +1,9 @@
 import Login from "./components/Login"
 import AlbumCard from './components/AlbumCard'
 import Nav from "./components/Nav"
-<<<<<<< HEAD
-import SeeMore from './components/seeMore'
-=======
 import { useGetUserAlbumsQuery } from "./api/api";
 import { useState, useEffect } from "react";
 
->>>>>>> e99013e5ed6d36078e3afca5ec1cd322922f7044
 
 
 const App = () => {
@@ -44,12 +40,7 @@ const App = () => {
     <>
     <Nav></Nav>
     <Login></Login>
-<<<<<<< HEAD
-    <AlbumCard></AlbumCard>
-    <SeeMore></SeeMore>
-=======
     {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
->>>>>>> e99013e5ed6d36078e3afca5ec1cd322922f7044
     </>
   )
 }

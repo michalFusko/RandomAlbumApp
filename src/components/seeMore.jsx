@@ -10,14 +10,13 @@ import { useGetUserAlbumsQuery } from '../api/api';
 const bull = (
   <Box
     component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.😎' }}
   >
     •
   </Box>
 );
 
 export default function SeeMore() {
-  const { data : Albums, error, isLoading } = useGetUserAlbumsQuery()
 
     
   return (
