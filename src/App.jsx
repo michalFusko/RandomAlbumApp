@@ -32,14 +32,13 @@ const App = () => {
     }
   }, [Albums]); // Runs only when Albums data changes
   
-  if (error) return <p>Error loading albums.</p>;
+  if (error) return <Login></Login>
   if (isLoading) return <p>loading...</p>;
 
 
   return (
     <>
     <Nav></Nav>
-    <Login></Login>
     {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
     </>
   )
