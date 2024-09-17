@@ -3,6 +3,7 @@ import AlbumCard from './components/AlbumCard'
 import Nav from "./components/Nav"
 import { useGetUserAlbumsQuery } from "./api/api";
 import { useState, useEffect } from "react";
+import SeeMore from "./components/SeeMore";
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
     <>
     <Nav></Nav>
     {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
+    <SeeMore></SeeMore>
     </>
   )
 }
