@@ -28,7 +28,7 @@ export default function SeeMore({randomAlbum}) {
 
   return (
   
-    <Card sx={{ width:"400px",height:"500px",display:"flex", alignItems:"center",justifyContent:"center",textAlign:"center", boxShadow:"none"}}>
+    <Card sx={{ width:"400px",height:"600px",display:"flex", alignItems:"center",justifyContent:"center",textAlign:"center", boxShadow:"none"}}>
       <CardContent>
         <Typography gutterBottom sx={{ color: 'text.primary', fontSize:"40px",paddingBottom:"20px" }}>
           Album details:
@@ -39,7 +39,7 @@ export default function SeeMore({randomAlbum}) {
           Label: {randomAlbum.label} <br></br>
           Release Date: {randomAlbum.release_date} <br></br>
         </Typography>
-        <PlayButton></PlayButton>
+        <PlayButton randomAlbum={randomAlbum}></PlayButton>
       </CardContent>
       <CardActions>
       </CardActions>
