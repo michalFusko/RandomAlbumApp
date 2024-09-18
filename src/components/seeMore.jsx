@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import PlayButton from './PlayButton';
 
 
 export default function SeeMore({randomAlbum}) {
@@ -23,6 +24,7 @@ export default function SeeMore({randomAlbum}) {
 
   }
   console.log(albumDuration())
+  
 
   return (
   
@@ -37,6 +39,7 @@ export default function SeeMore({randomAlbum}) {
           Label: {randomAlbum.label} <br></br>
           Release Date: {randomAlbum.release_date} <br></br>
         </Typography>
+        <PlayButton></PlayButton>
       </CardContent>
       <CardActions>
       </CardActions>
