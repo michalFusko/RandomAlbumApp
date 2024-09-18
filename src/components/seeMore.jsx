@@ -41,10 +41,10 @@ export default function SeeMore({randomAlbum}) {
           Album details
         </Typography>
         <Typography sx={{}} variant="h6" component="div">
-          Release Date: {randomAlbum.release_date} <br></br>
-          Label: {randomAlbum.label} <br></br>
           Duration: {albumDuration()} <br></br>
-          Number of tracks: {albumLength}
+          Number of tracks: {albumLength} <br></br>
+          Label: {randomAlbum.label} <br></br>
+          Release Date: {randomAlbum.release_date} <br></br>
         </Typography>
       </CardContent>
       <CardActions>
