@@ -40,8 +40,10 @@ const App = () => {
   return (
     <>
     <Nav></Nav>
-    {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
-    {randomAlbum && <SeeMore randomAlbum={randomAlbum}></SeeMore>}
+    <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+      {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
+      {randomAlbum && <SeeMore randomAlbum={randomAlbum}></SeeMore>}
+    </div>
     </>
   )
 }

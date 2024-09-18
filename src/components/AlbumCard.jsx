@@ -12,10 +12,10 @@ export default function AlbumCard({randomAlbum, reloadAlbums}) {
   console.log("feromojepero")
 
   return (
-    <Card sx={{ display: 'flex', flexDirection:"column", alignItems:"center", boxShadow:"0px 5px 25px #191414", width:"300px", border:"1px solid #191414", margin:"auto" }}>
+    <Card sx={{ display: 'flex', flexDirection:"column", alignItems:"center", boxShadow:"0px 5px 25px #191414", width:"450px", margin:"10px 100px 0 0 " }}>
         <CardMedia
           component="img"
-          sx={{ width:"300px", height:"300px", border:"1px solid #191414",  }}
+          sx={{ width:"450px", height:"450px",  }}
           image={randomAlbum.images[0].url}
           alt="Live from space album cover"
         />
