@@ -4,6 +4,7 @@ import Nav from "./components/Nav"
 import { useGetUserAlbumsQuery } from "./api/api";
 import { useState, useEffect } from "react";
 import SeeMore from "./components/SeeMore";
+import PlayButton from "./components/PlayButton"
 
 
 
@@ -44,6 +45,7 @@ const App = () => {
       {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
       {randomAlbum && <SeeMore randomAlbum={randomAlbum}></SeeMore>}
     </div>
+    
     </>
   )
 }
