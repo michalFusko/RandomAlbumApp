@@ -24,6 +24,7 @@ export default function SeeMore({randomAlbum}) {
 
   }
   console.log(albumDuration())
+  
 
   return (
   
