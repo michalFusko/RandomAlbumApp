@@ -16,6 +16,7 @@ const bull = (
 );
 
 export default function SeeMore({randomAlbum}) {
+  console.log(randomAlbum)
   console.log(randomAlbum.tracks.items[0].duration_ms)
   const albumLength = randomAlbum.tracks.items.length
   let albumDuriationMs = 0
@@ -28,7 +29,7 @@ export default function SeeMore({randomAlbum}) {
     const albumTime = new Date(albumDuriationMs - 3600000)
     console.log(albumTime.toTimeString().split(" "))
     return albumTime.toTimeString().split(" ")[0] 
-    
+
   }
   console.log(albumDuration())
 
