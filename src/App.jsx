@@ -4,6 +4,7 @@ import Nav from "./components/Nav"
 import { useGetUserAlbumsQuery } from "./api/api";
 import { useState, useEffect } from "react";
 import SeeMore from "./components/SeeMore";
+import PlayButton from "./components/PlayButton";
 
 
 
@@ -36,12 +37,12 @@ const App = () => {
   if (error) return <Login></Login>
   if (isLoading) return <p>loading...</p>;
 
-
   return (
     <>
     <Nav></Nav>
     {randomAlbum&&<AlbumCard randomAlbum={randomAlbum} reloadAlbums={reloadAlbums}></AlbumCard>}
     {randomAlbum && <SeeMore randomAlbum={randomAlbum}></SeeMore>}
+    <PlayButton randomAlbum={randomAlbum}></PlayButton>
     </>
   )
 }
